@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background: linear-gradient(135deg, #141e30, #243b55);">
+
+<div class="container">
+    <h1 style="color:white;">🎯 Smart Resume Analysis</h1>
+
+    {% for job in results %}
+    <div class="card">
+        <h3>Match Score: {{ "%.2f"|format(job.score * 100) }}%</h3>
+
+        <p>{{ job.description[:200] }}...</p>
+
+        <p><b>✅ Matched Skills:</b> {{ job.matched }}</p>
+        <p><b>❌ Missing Skills:</b> {{ job.missing }}</p>
+    </div>
+    {% endfor %}
+
+    <a href="/" class="btn">⬅ Try Another Resume</a>
+</div>
+
+</body>
+</html>

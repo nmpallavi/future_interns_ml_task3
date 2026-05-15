@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay">
+        <h1>🚀 AI Resume Screening System</h1>
+        <p>Upload your resume and find the best job matches instantly</p>
+
+       <form action="/match" method="post" enctype="multipart/form-data" class="upload-box" onsubmit="showLoader()">
+    <input type="file" name="resume" required>
+    <button type="submit">Analyze Resume</button>
+</form>
+
+<div id="loader" style="display:none;">
+    <p>⏳ Analyzing Resume... Please wait</p>
+</div>
+
+<script>
+function showLoader() {
+    document.getElementById("loader").style.display = "block";
+}
+</script>
+    </div>
+</div>
+
+</body>
+</html>
