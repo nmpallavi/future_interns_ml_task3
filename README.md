@@ -21,13 +21,13 @@ VS Code
 
 ## 📁 Project Structure
 TASK3/
-│── app.py
-│── requirements.txt
-│── static/
-│── templates/
-│── uploads/
-│── resumes/
-│── database.db
+ app.py
+ requirements.txt
+ static/
+ templates/
+ uploads/
+ resumes/
+ database.db
 
 ## ⚙️ Features
 Upload resumes through web interface
